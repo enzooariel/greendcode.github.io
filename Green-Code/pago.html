@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seccion de pago y envio</title>
+    <link rel="stylesheet" href="pago.css">
+</head>
+<body>
+  
+    <header>
+        <nav>
+            <div id="volverModal" onclick="redirigirAModal()">Volver</div>
+        </nav>
+    </header>
+
+    <form id="contactForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="nombre" name="name" required>
+        <br>
+    
+        <label for="phone">Teléfono:</label>
+        <input type="number" id="telefono" name="phone" required>
+        <br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+    
+        <label for="location">Lugar de entrega:</label>
+        <input type="text" id="locacion" name="location" required>
+        <br>
+    
+        <label for="deliveryDate">Fecha de entrega:</label>
+        <input type="date" id="fecha" name="deliveryDate" required>
+        <br>
+    
+        <label for="paymentMethod">Método de pago:</label>
+        <select id="metodo" name="paymentMethod" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="creditCard">Tarjeta de crédito</option>
+            <option value="paypal">Debito</option>
+            <option value="paypal">Mercado Pago</option>
+
+           
+        </select>
+        <br>
+    
+        <label for="cuotas">Cuotas:</label>
+        <select id="cuotas" name="cuotas" required>
+            <option value="" disabled selected>Selecciona la cantidad de cuotas</option>
+            <option value="1">1 cuota</option>
+            <option value="3">3 cuotas</option>
+            <option value="6">6 cuotas</option>
+           
+        </select>
+        <br>
+    
+        <label for="message">Mensaje:</label>
+        <textarea id="mensaje" name="message" required></textarea>
+        <br>
+    
+        <button type="submit">Enviar</button>
+    </form>
+    
+  
+
+    <script src="pago.js"></script>
+</form>
+</body>
+</html>
